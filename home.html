@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <head>
 <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
-</head>
-
-<body>
-<h1> Diversity Check ✓</h1>
 
 <style>
       h1 {font-family: 'Abel', sans-serif;
@@ -41,9 +37,40 @@ li a {
 a:hover{
       text-decoration: underline; }
       
+
+ input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    
+     width: 50%;
+    margin: 0 auto;
+     position: absolute;
+      top: 0%;
+      width: 400;
+      left: 33%}
+#SearchBar{
+ position: absolute;
+ width: 100%;
+  text-align: center;
+  top: 50%;}
+  
 </style>
 </head>
+
 <body>
+<h1> Diversity Check ✓</h1>
+
+
 
 <ul>
   <li><a href="#Donate">Donate</a></li>
@@ -51,18 +78,19 @@ a:hover{
   <li><a href="#About Us">About Us</a></li>
   <li><a href="#Home">Home</a></li>
 </ul>
-
-<input type="search" id="mySearch" placeholder="Search Company">
-<p></p>
-
-<button onclick="myFunction()">Now Let's Get Investigating               😎 👀 🕵🏽‍♀️</button>
-
 <p id="demo"></p>
-      <body>
+ 
 
+<div id= "SearchBar"> 
+
+<form>
+  <input type="text" name="search" placeholder="Search for any Compnay :)">
+</form> 
+</div>
+
+
+
+
+</body>
 <script>
-function myFunction() {
-    var x = document.getElementById("mySearch").placeholder;
-    document.getElementById("demo").innerHTML = x;
-}
 </script>
