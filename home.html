@@ -2,6 +2,34 @@
 <head>
 <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
 
+<script type="text/javascript">
+function sendToPage(){
+             var input = document.getElementById("search").value;
+              //alert(input);
+             if (input == "Apple"){
+                 window.location.href = "apple.html"; return false; //return false says do not try to submit anything, just go to window location
+
+             }
+             else if (input == "AppNexus"){
+                 window.location.href= "appnexus.html";return false;}
+
+             else if (input == "Google"){
+               window.location.href="google.html";return false;
+             }
+
+             else if (input == "Twitter";return false;){
+               window.location.href="twitter.html"; return false;
+             }
+}
+             else if (input == "Microsoft"){
+              window.location.href="microsoft.html";return false;}
+
+             else {
+                 alert('Try submitting a different compay'); return false;}
+
+
+
+</script>
 <style>
       h1 {font-family: 'Abel', sans-serif;
       font-size:37px;
@@ -13,7 +41,7 @@
       position: absolute;
       top: 50%;
       width: 100%;}
-     
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -33,10 +61,10 @@ li a {
     padding: 16px;
     text-decoration: none;
 }
- 
+
 a:hover{
       text-decoration: underline; }
-      
+
 
  input[type=text] {
     width: 130px;
@@ -46,12 +74,12 @@ a:hover{
     font-size: 16px;
     background-color: white;
     background-image: url('searchicon.png');
-    background-position: 10px 10px; 
+    background-position: 10px 10px;
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
-    
+
      width: 50%;
     margin: 0 auto;
      top: 0%;
@@ -63,17 +91,17 @@ a:hover{
   text-align: center;
   top: 50%;
   margin-bottom: 300px}
-      
+
       img{
             width: 275px;
             margin: 70px;
       }
-  
+
 </style>
 </head>
 
 <body>
-<h1> Diversity Check ✓</h1>
+<h1> Diversity Check✓</h1>
 
 
 
@@ -84,14 +112,19 @@ a:hover{
   <li><a href="home.html">Home</a></li>
 </ul>
 <p id="demo"></p>
- 
 
-<div id= "SearchBar"> 
 
-<form>
-  <input type="text" name="search" placeholder="Search for any Company :)">
-</form> 
-</div>
+<div id= "SearchBar">
+
+<!--<form>
+  <input type="text" id="search" placeholder="Search for any Company :)"> </form-->
+
+  <div>
+<form action="" onsubmit="sendToPage();return false;" method="post">
+<input type="text" id="search" placeholder="Search for a company!" value="">
+    </form>
+        </div>
+
       <img src= "http://mandmglobal.com/wp-content/uploads/2015/06/AppNexus.jpg">
       <img src= "https://3.bp.blogspot.com/-7GWaGpv6wDQ/Vr_XU6JvOnI/AAAAAAAAYoA/FJ2CTyCuOXY/s400/valentines-day-2015.gif">
       <img src= "http://1.bp.blogspot.com/-HX9OSlzg6NI/U5qAObXR28I/AAAAAAAABL8/cl7LtayWS94/s1600/facebook.jpg">
