@@ -1,271 +1,212 @@
 <!DOCTYPE html>
-<head>
- <script>
-  function sendToPage() { //searchbar 
-             var input = document.getElementById("search").value;
-              //alert(input);
-             if (input == "Apple"){
-                 window.location.href = "apple.html"; return false; //return false says do not try to submit anything, just go to window location
-
-             }
-             else if (input == "AppNexus"){
-                 window.location.href= "appnexus.html";return false;}
-
-             else if (input == "Google"){
-               window.location.href="google.html";return false;
-             }
-
-             else if (input == "Twitter"){
-               window.location.href="twitter.html"; return false;
-             }
-
-             else if (input == "Microsoft"){
-              window.location.href="microsoft.html";return false;}
-
-             else {
-                 alert('Try submitting a different compay'); return false;}
-  }
-
-
-var slideIndex = 0;
-function showSlides() { //slideshow
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex> slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-showSlides();
+ <head>
+ <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
+ 
+ <style>
+       h1 {font-family: 'Abel', sans-serif;
+       font-size:37px;
+       text-align:center;
+       left: 0;
+       line-height: 180px;
+       margin: auto;
+       margin-top: -150px;
+       position: absolute;
+       top: 50%;
+       width: 100%;}
+      
+ ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+     background-color: white;
+ }
+ 
+ li {
+     float: right;
+ }
+ 
+ li a {
+     display: white;
+     color: black;
+     text-align: center;
+     padding: 16px;
+     text-decoration: none;
+ }
   
- </script>
+ a:hover{
+       text-decoration: underline; }
+       
  
- 
-<link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
+  input[type=text] {
+     width: 130px;
+     box-sizing: border-box;
+     border: 2px solid #ccc;
+     border-radius: 4px;
+     font-size: 16px;
+     background-color: white;
+     background-image: url('searchicon.png');
+     background-position: 10px 10px; 
+     background-repeat: no-repeat;
+     padding: 12px 20px 12px 40px;
+     -webkit-transition: width 0.4s ease-in-out;
+     transition: width 0.4s ease-in-out;
      
-
-<style>
-      h1 {font-family: 'Abel', sans-serif;
-      font-size:37px;
-      text-align:center;
-      left: 0;
-      line-height: 180px;
-      margin: auto;
-      margin-top: -150px;
-      position: absolute;
-      top: 50%;
-      width: 100%;}
-     
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: white;
-}
-
-li {
-    float: right;
-}
-
-li a {
-    display: white;
-    color: black;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-}
- 
-a:hover{
-      text-decoration: underline; }
-      
-
- input[type=text] {
-    width: 130px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    background-image: url('searchicon.png');
-    background-position: 10px 10px; 
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-    
-     width: 50%;
-    margin: 0 auto;
-     top: 0%;
-      width: 400;
-      left: 25%}
-#SearchBar{
- margin-top:40%;
- width: 100%;
-  text-align: center;
-  top: 50%;
-  margin-bottom: 300px}
-      
-      img{
-            width: 275px;
-            margin: 70px;
-      }
-/* {box-sizing:border-box}*/
-body {font-family: Verdana,sans-serif;}
-.mySlides {display:none}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 500px;
-  position: 10000px;
-  margin: auto;
-  height: 500px;
-  padding: 500px;
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
+      width: 50%;
+     margin: 0 auto;
+      top: 0%;
+       width: 400;
+       left: 25%}
+ #SearchBar{
+  margin-top:40%;
   width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  height: 13px;
-  width: 13px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}  
-</style>
-</head>
-
-<body>
-<h1> Diversity Check ✓</h1>
-<div>
-<form action="" onsubmit="sendToPage();return false;" method="post">
-<input type="text" id="search" placeholder="Search for a company!" value="">
-    </form>
-        </div>
-
-<ul>
-  <li><a href="donate.html">Donate</a></li>
-  <li><a href="contactus.html">Contact Us</a></li>
-  <li><a href="aboutus.html">About Us</a></li>
-  <li><a href="home.html">Home</a></li>
-</ul>
-<p id="demo"></p>
-
-<div class="slideshow-container">
-
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="http://mandmglobal.com/wp-content/uploads/2015/06/AppNexus.jpg" style="width:100%">
-  <div class="text">Caption Text</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="https://3.bp.blogspot.com/-7GWaGpv6wDQ/Vr_XU6JvOnI/AAAAAAAAYoA/FJ2CTyCuOXY/s400/valentines-day-2015.gif" style="width:100%">
-  <div class="text">Caption Two</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="http://1.bp.blogspot.com/-HX9OSlzg6NI/U5qAObXR28I/AAAAAAAABL8/cl7LtayWS94/s1600/facebook.jpg" style="width:100%">
-  <div class="text">Caption Three</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="http://www.daxdata.co.za/wp-content/uploads/Adobe-logo-1.png" style="width:100%">
-  <div class="text">Caption Text</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="https://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/0025/2091/brand.gif?itok=eU6eIyLZ" style="width:100%">
-  <div class="text">Caption Two</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="http://www.radiosiente.com/wp-content/uploads/2017/05/A2.png" style="width:100%">
-  <div class="text">Caption Three</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="https://s-media-cache-ak0.pinimg.com/originals/26/0d/7d/260d7dcdc5aaa99fd1d03dc290d816f3.jpg" style="width:100%">
-  <div class="text">Caption Two</div>
-</div>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
-
-
-
-
-</body>
-</html>
+   text-align: center;
+   top: 50%;
+   margin-bottom: 300px}
+       
+       img{
+             width: 275px;
+             margin: 70px;
+       }
+   
+ </style>
+ </head>
+ 
+ <body>
+ <h1> Diversity Check ✓</h1>
+ 
+ 
+ 
+ <ul>
+   <li><a href="donate.html">Donate</a></li>
+   <li><a href="contactus.html">Contact Us</a></li>
+   <li><a href="aboutus.html">About Us</a></li>
+   <li><a href="home.html">Home</a></li>
+ </ul>
+ <p id="demo"></p>
+  
+ 
+ <div id= "SearchBar"> 
+ 
+ <form>
+   <input type="text" name="search" placeholder="Search for any Company :)">
+ </form> 
+ </div>
+      <img src= "https://static.wixstatic.com/media/28a63b_c088955299864f5c9d7af2b89468fe47~mv2.gif"> 
+       <div class="slideshow-container">
+ 
+ <div class="mySlides fade">
+   <div class="numbertext">1 / 3</div>
+   <img src="http://mandmglobal.com/wp-content/uploads/2015/06/AppNexus.jpg" style="width:100%">
+   <div class="text">Caption Text</div>
+ </div>
+ 
+ <div class="mySlides fade">
+   <div class="numbertext">2 / 3</div>
+   <img src="https://3.bp.blogspot.com/-7GWaGpv6wDQ/Vr_XU6JvOnI/AAAAAAAAYoA/FJ2CTyCuOXY/s400/valentines-day-2015.gif" style="width:100%">
+   <div class="text">Caption Two</div>
+ </div>
+ 
+ <div class="mySlides fade">
+   <div class="numbertext">3 / 3</div>
+   <img src="http://1.bp.blogspot.com/-HX9OSlzg6NI/U5qAObXR28I/AAAAAAAABL8/cl7LtayWS94/s1600/facebook.jpg" style="width:100%">
+   <div class="text">Caption Three</div>
+ </div>
+ 
+ <div class="mySlides fade">
+   <div class="numbertext">1 / 3</div>
+   <img src="http://www.daxdata.co.za/wp-content/uploads/Adobe-logo-1.png" style="width:100%">
+   <div class="text">Caption Text</div>
+ </div>
+ 
+ <div class="mySlides fade">
+   <div class="numbertext">2 / 3</div>
+   <img src="https://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/0025/2091/brand.gif?itok=eU6eIyLZ" style="width:100%">
+   <div class="text">Caption Two</div>
+ </div>
+ 
+ <div class="mySlides fade">
+   <div class="numbertext">3 / 3</div>
+   <img src="http://www.radiosiente.com/wp-content/uploads/2017/05/A2.png" style="width:100%">
+   <div class="text">Caption Three</div>
+ </div>
+ 
+ <div class="mySlides fade">
+   <div class="numbertext">2 / 3</div>
+   <img src="https://s-media-cache-ak0.pinimg.com/originals/26/0d/7d/260d7dcdc5aaa99fd1d03dc290d816f3.jpg" style="width:100%">
+   <div class="text">Caption Two</div>
+ </div>
+       <meta name="viewport" content="width=500px", initial-scale=0.25">
+ <style>
+ * {box-sizing:border-box}
+ body {font-family: Verdana,sans-serif;}
+ .mySlides {display:none}
+ 
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 500px;
+ -  position: relative;
+ +  position: 500;
+    margin: auto;
+  }
+  
+ /* Caption text */
+ .text {
+   color: #f2f2f2;
+   font-size: 15px;
+   padding: 8px 12px;
+   position: absolute;
+   bottom: 8px;
+   width: 100%;
+   text-align: center;
+ }
+ 
+ /* Number text (1/3 etc) */
+ .numbertext {
+   color: #f2f2f2;
+   font-size: 12px;
+   padding: 8px 12px;
+   position: absolute;
+   top: 0;
+ }
+ 
+ /* The dots/bullets/indicators */
+ .dot {
+   height: 13px;
+   width: 13px;
+   margin: 0 2px;
+   background-color: #bbb;
+   border-radius: 50%;
+   display: inline-block;
+   transition: background-color 0.6s ease;
+ }
+ 
+ .active {
+   background-color: #717171;
+ }
+ 
+ /* Fading animation */
+ .fade {
+   -webkit-animation-name: fade;
+   -webkit-animation-duration: 1.5s;
+   animation-name: fade;
+   animation-duration: 1.5s;
+ }
+ 
+ @-webkit-keyframes fade {
+   from {opacity: .4} 
+   to {opacity: 1}
+ }
+ 
+ @keyframes fade {
+   from {opacity: .4} 
+   to {opacity: 1}
+ }
+ 
+ /* On smaller screens, decrease text size */
+ @media only screen and (max-width: 300px) {
+   .text {font-size: 11px}
+ }
+ </style>
+ </head>
+ <body>
