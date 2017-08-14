@@ -17,8 +17,8 @@ h1 {letter-spacing: 6px}
       width: 45%;
       font-size: 20px;}
 .picture{display: inline-block;
-      margin-bottom: 100px; 
-      width: 45%;} 
+      margin-bottom: 100px;
+      width: 45%;}
  .dropbtn {
     background-color: #d1d1e0;
     color: white;
@@ -63,6 +63,37 @@ h1 {letter-spacing: 6px}
 .dropdown:hover .dropbtn {
     background-color: #d1d1e0;
 }
+
+input[type=text] {
+   width: 130px;
+   box-sizing: border-box;
+   border: 2px solid #ccc;
+   border-radius: 4px;
+   font-size: 16px;
+   background-color: white;
+   background-image: url('searchicon.png');
+   background-position: 10px 10px;
+   background-repeat: no-repeat;
+   padding: 12px 20px 12px 40px;
+   -webkit-transition: width 0.4s ease-in-out;
+   transition: width 0.4s ease-in-out;
+
+    width: 50%;
+   margin: 0 auto;
+    top: 0%;
+     width: 400;
+     left: 25%}
+#SearchBar{
+margin-top:40%;
+width: 100%;
+ text-align: center;
+ top: 50%;
+ margin-bottom: 300px}
+
+.searchbarposition{
+  text-align: center;
+
+}
 </style>
 <body>
 
@@ -73,10 +104,10 @@ h1 {letter-spacing: 6px}
 <!-- Header -->
 <header class="w3-panel w3-center w3-opacity" style="padding-top:128px; padding-bottom: 3px; padding-left: 16px; padding-right: 16px;">
   <h1> Diversity Check ✔</h1>
-  <h1 class="w3-xlarge">"Diversity is being invited to the party; 
+  <h1 class="w3-xlarge">"Diversity is being invited to the party;
   inclusion is being asked to dance." - Verna Myers</h1>
 
-  
+
   <div class="w3-padding-32">
     <div class="w3-bar w3-border">
       <a href="home.html" class="w3-bar-item w3-button">Home</a>
@@ -85,12 +116,12 @@ h1 {letter-spacing: 6px}
       <a href="donate.html" class="w3-bar-item w3-button w3-hide-small">Donate</a>
     </div>
   </div>
- 
+
 </header>
 
 <div style="width=100%; margin-top= -200px">
 <div class="dropdown">
-  <button class="dropbtn">Dropdown</button>
+  <button class="dropbtn">List of companies</button>
   <div class="dropdown-content">
    <a href="adobe.html">Adobe</a>
     <a href="apple.html">Apple</a>
@@ -98,18 +129,28 @@ h1 {letter-spacing: 6px}
     <a href="facebook.html">Facebook</a>
     <a href="google.html">Google</a>
     <a href="microsoft.html">Microsoft</a>
-    <a href="twiter.html">Twitter</a> 
+    <a href="twiter.html">Twitter</a>
   </div>
+</div>
+</div>
+
+<div class="searchbarposition"
+<div> <form action="" onsubmit="return sendToPage();"  method="post"> <!-- return SendToPage to go to function-->
+<input type="text" class="search" placeholder="Search for a company!" value="">
+  </form>
+<br>
+<br>
+<br>
 </div>
 </div>
 
 <!-- Photo Grid -->
 <div class="picture">
- <img src="https://68.media.tumblr.com/a559ac088fa9bf31eb46cca37fbd63f8/tumblr_o3vy9bamJr1rqeszco1_1280.gif" style="width:100%"> 
+ <img src="https://68.media.tumblr.com/a559ac088fa9bf31eb46cca37fbd63f8/tumblr_o3vy9bamJr1rqeszco1_1280.gif" style="width:100%">
 
   </div>
 
-  <div class="text" style="text-align: center;"> 
+  <div class="text" style="text-align: center;">
   	The idea of this website stemmed from a field trip that we went to. During this trip, we were able to talk to other computer programmers. One of these programmers included a woman named Victoria Song. As a female minority, she explained to us that before she would walk into any interview, she would look around the room to see if anyone "looked like her." That is why we created this platform. We want to ensure that people like Victoria and other minorites don't have to look around the room to see if "anyone looks like them."
   </div>
 
@@ -125,7 +166,7 @@ h1 {letter-spacing: 6px}
 </div>
 
 <!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-large"> 
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-large">
   <i class="fa fa-facebook-official w3-hover-opacity"></i>
   <i class="fa fa-instagram w3-hover-opacity"></i>
   <i class="fa fa-snapchat w3-hover-opacity"></i>
@@ -137,4 +178,3 @@ h1 {letter-spacing: 6px}
 
 </body>
 </html>
-
