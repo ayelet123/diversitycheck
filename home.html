@@ -1,5 +1,42 @@
 <!DOCTYPE html>
 <html>
+
+<link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
+<script type="text/javascript">
+function sendToPage() { // <-- remember to close out that bracket! //searchbar
+             var input = document.getElementsByClassName("search")[0].value;
+              //console.log(input);
+              //alert(input);
+             if (input == "Apple"){
+                window.location.href= "apple.html"; return false; //return false says do not try to submit anything, just go to window location
+
+             }
+             else if (input == "AppNexus"){
+               window.location.href= "appnexus.html";return false;}
+
+
+             else if (input == "Google") {
+               window.location.href="google.html";return false;
+             }
+
+             else if (input == "Twitter"){
+               window.location.href="twitter.html"; return false;
+             }
+
+             else if (input == "Microsoft"){
+               window.location.href="microsoft.html";return false;
+             }
+
+
+             else {
+                alert('Try submitting a different company'); return false;}
+
+              }
+
+
+
+</script>
+
 <title>Diversity Check</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
