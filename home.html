@@ -51,15 +51,22 @@ function sendToPage() { // <-- remember to close out that bracket! //searchbar
 body,h1 {font-family: "Raleway", Arial, sans-serif}
 h1 {letter-spacing: 6px}
 .w3-row-padding img {margin-bottom: 12px; display: inline-block;}
-.text{display: inline-block;
+
+.text {
+      display: inline-block;
       margin-bottom: 50px;
       vertical-align: top;
       padding: 75px;
       width: 45%;
-      font-size: 20px;}
-.picture{display: inline-block;
+      font-size: 20px;
+}
+
+.picture {
+      display: inline-block;
       margin-bottom: 100px;
-      width: 45%;}
+      width: 45%;
+}
+
  .dropbtn {
     background-color: #d1d1e0;
     color: white;
@@ -67,14 +74,16 @@ h1 {letter-spacing: 6px}
     font-size: 16px;
     border: none;
     cursor: pointer;
-    margin-left: 400px;
-    margin-right: auto;
-    margin-bottom: 50px;
+    margin-left: 0px;
 }
 
 .dropdown {
-    position: relative;
-    display: inline-block;
+    margin: 0px;
+    width: 170px;
+    float: left;
+    margin-right: 30px;
+    margin-left: 70px
+
 }
 
 .dropdown-content {
@@ -119,21 +128,25 @@ input[type=text] {
    -webkit-transition: width 0.4s ease-in-out;
    transition: width 0.4s ease-in-out;
 
-    width: 50%;
+   width: 50%;
    margin: 0 auto;
-    top: 0%;
-     width: 400;
-     left: 25%}
-#SearchBar{
-margin-top:40%;
-width: 100%;
- text-align: center;
- top: 50%;
- margin-bottom: 300px}
+   top: 0%;
+   width: 400;
+   left: 25%;
+}
 
 .searchbarposition{
-  text-align: center;
+  width: 370px;
+  display: inline;
+  margin: 0px;
 
+}
+
+#container {
+  width: 50%;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
 <body>
@@ -160,7 +173,7 @@ width: 100%;
 
 </header>
 
-<div style="width=100%; margin-top= -200px">
+<div id="container">
 <div class="dropdown">
   <button class="dropbtn">List of companies</button>
   <div class="dropdown-content">
@@ -173,15 +186,17 @@ width: 100%;
     <a href="twiter.html">Twitter</a>
   </div>
 </div>
-</div>
 
 <div class="searchbarposition">
-<div> <form action="" onsubmit="return sendToPage();"  method="post"> <!-- return SendToPage to go to function-->
-<input type="text" class="search" placeholder="Search for a company!" value="">
-  </form>
+    <div>
+        <form action="" onsubmit="return sendToPage();"  method="post"> <!-- return SendToPage to go to function-->
+            <input type="text" class="search" placeholder="Search for a company!" value="">
+        </form>
+    </div>
+</div>
 
 </div>
-</div>
+
 
 <br>
 <br>
@@ -221,3 +236,4 @@ width: 100%;
 
 </body>
 </html>
+
